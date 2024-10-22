@@ -1,9 +1,10 @@
-# Import librariess
+# Import libraries
 import pandas as pd
 from sklearn.linear_model import LinearRegression
 import numpy as np
 import matplotlib.pyplot as plt
 from datetime import datetime, timedelta
+import os
 
 # Load the XLSX file
 file_path = './data/input_data.xlsx'  # Path relative to the repository root
@@ -59,6 +60,9 @@ if 'Date' in df.columns:
     plt.ylabel('IQD')
     plt.legend()
     plt.grid(True)
+
+    # Ensure artifacts directory exists
+    os.makedirs('../artifacts', exist_ok=True)
 
     # Save the plot as an image in the artifacts directory
     output_image_path = '../artifacts/prediction_plot.png'
