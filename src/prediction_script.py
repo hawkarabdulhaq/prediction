@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from datetime import datetime, timedelta
 
 # Load the XLSX file
-file_path = '../data/input_data.xlsx'  # Path to the input Excel file
+file_path = './data/input_data.xlsx'  # Path relative to the repository root
 df = pd.read_excel(file_path)
 
 # Check if data is loaded
