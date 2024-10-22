@@ -62,10 +62,10 @@ if 'Date' in df.columns:
     plt.grid(True)
 
     # Ensure artifacts directory exists
-    os.makedirs('../artifacts', exist_ok=True)
+    os.makedirs('artifacts', exist_ok=True)
 
     # Save the plot as an image in the artifacts directory
-    output_image_path = '../artifacts/prediction_plot.png'
+    output_image_path = 'artifacts/prediction_plot.png'
     plt.savefig(output_image_path)
     plt.show()
 
